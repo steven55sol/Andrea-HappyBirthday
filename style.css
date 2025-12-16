@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+}
+
+:root{
+    --color-primary: #fdd5d5ff;
+}
+
+main{
+    position: relative;
+    max-width: 100rem;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.fondo{
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    z-index: -1;
+}
+
+.icon{
+  position: absolute;
+  font-size: 20px;
+  animation: subir 4s linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.container-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.number{
+  display: flex;
+}
+
+.container-title svg{
+  font-size: 2rem;
+}
+
+#title{
+  font-size: 5rem;
+  color: #bb3a3a;
+  text-align: center;
+  font-weight: 800;
+  -webkit-text-stroke: 1px #f07676;
+}
+
+.sub-title{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.sub-title span{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.container-cards{
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px));
+  gap: 2rem;
+  margin-top: 6rem;
+  padding: 1.5rem;
+}
+
+.card{
+  position: relative;
+  background-color: rgba(233, 90, 90, 0.5);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.card::before{
+  position: absolute;
+  content: "1";
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -1.5rem;
+  left: -1rem;
+  background-color: #fa4747;
+  padding: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.container-title_card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(219, 79, 79, 0.3);
+}
+
+.title-card{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.icon-music{
+  background-color: rgb(238, 109, 109);
+  padding: 1rem;
+  border-radius: 1rem; 
+}
+
+.btns-music{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns-music img{
+  background-color: #d63939;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.container-subtitle_card{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.container-subtitle_card span{
+  font-size: 1.8rem;
+}
+
+#modal{
+  position: absolute;
+  margin: auto;
+  border: none;
+  width: 90%;
+  height: 30rem;
+}
