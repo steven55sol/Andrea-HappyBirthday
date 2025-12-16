@@ -16,6 +16,7 @@ export function Animarbtn(){
             audioActual.play();
 
             modal.showModal();
+            modal.style.position = "fixed";
         });
 
     })

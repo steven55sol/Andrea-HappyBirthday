@@ -88,6 +88,12 @@ main{
   font-weight: 500;
 }
 
+@media  screen and (max-width:480px) {
+  .sub-title span{
+    font-size: 1.5rem;
+  }
+}
+
 .container-cards{
   /* background-color: red; */
   display: grid;
