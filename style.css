@@ -181,7 +181,7 @@ main{
   font-size: 1.8rem;
 }
 
-#modal{
+.modal{
   position: absolute;
   margin: auto;
   border: none;
@@ -192,19 +192,19 @@ main{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#modal img{
+.modal img{
   position: relative;
   width: 30px;
   left: 45%;
 }
 
-#modal p{
+.modal p{
   font-size: 1.8rem;
   text-align: center;
   margin: 1rem 0rem;
 }
 
-#modal button{
+.modal button{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -219,16 +219,16 @@ main{
   transition: background-color 0.3s ease;
 }
 
-#modal button:hover{
+.modal button:hover{
   background-color: #ff6161;
 }
 
-#modal::backdrop{
+.modal::backdrop{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width:720px) {
-  #modal{
+  .modal{
     width: 50rem;
   }
 }

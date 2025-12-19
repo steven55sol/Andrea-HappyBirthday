@@ -225,18 +225,17 @@ export function crearCard(){
                     <img src="./assets/heart-lock.svg" width=24" alt="icono de corazon">
                     <span>${cards.dedicatoria}</span>
                 </div>
-                <dialog id="modal">
-                    <img src="./assets/images/tulipan.png" width="48px" alt="icono de tulipanes">
-                    <p id="modalTexto">${cards.frase}</p>
-                    <button class="close-modal">Cerrar</button>
-                </dialog>
             </section>
         `;
     });
     
-    Animarbtn();
+    Animarbtn(dataCard);
     CardsScroll();
 }
+
+const {frase,url_music} = dataCard[0]
+
+console.log();
 
 function CardsScroll() {
     const cards = document.querySelectorAll(".card");
