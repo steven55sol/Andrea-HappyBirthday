@@ -97,10 +97,16 @@ main{
 .container-cards{
   /* background-color: red; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 6rem;
   padding: 1.5rem;
+}
+
+@media screen and (max-width:720px) {
+  .container-cards{
+    grid-template-columns: 1fr;
+  }
 }
 
 .card{
@@ -181,4 +187,47 @@ main{
   border: none;
   width: 90%;
   height: 30rem;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal img{
+  position: relative;
+  left: 45%;
+}
+
+#modal p{
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2rem 0rem;
+}
+
+#modal button{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: #fa4747;
+  border: none;
+  border-radius: .5rem;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+#modal button:hover{
+  background-color: #ff6161;
+}
+
+#modal::backdrop{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width:720px) {
+  #modal{
+    width: 50rem;
+  }
 }
